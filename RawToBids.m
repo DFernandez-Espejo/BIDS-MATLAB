@@ -1,4 +1,4 @@
-%% BIDS Creator for the experiment MRC_NIRG_WP1b, fMRI + Joystick data
+%% BIDS Creator from MRI raw data 
 %%Davide Aloi - PhD student University of Birmingham
 
 %% INPUT
