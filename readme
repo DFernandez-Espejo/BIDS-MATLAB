@@ -1,7 +1,7 @@
 # BIDS-MATLAB
-A series of script that can help you convert a fMRI raw dataset to BIDS.
 BIDS Creator from MRI raw data 
 Davide Aloi - PhD student University of Birmingham
+A series of script that can help you to convert a fMRI raw dataset to BIDS.
 
 INPUT
 RAW data should be organised as following:
@@ -39,7 +39,7 @@ within their names.
 e.g. if the condition is fMRI_tdcs_pre, the nifti file should be:
 XXXXX_fMRI_tdcs_pre_XXXXXX.nifti
 
-nb: When a dicom folder is not present the script presumes that DICOM files
+Note: When a dicom folder is not present the script presumes that DICOM files
 have already been converted to nifti and it will look for .nii files. In
 this case the script will have to write a Json sidecar file. You should
 therefore insert the information that you want to have in your json
@@ -50,6 +50,8 @@ Experiment folder (README,CHANGES,participants.tsv,dataset_description.json).
         Ses (ses-sesName)
             Subj-number.tsv (not in the script)
                 anat
+                sub-n_ses-SesName_T1w.nii
+                sub-n_ses-SesName_T1w.json
                 func
                     sub-n_ses-SesName_task-TaskName.json
                     sub-n_ses-SesName_task-TaskName.nii
