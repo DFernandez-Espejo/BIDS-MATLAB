@@ -135,7 +135,7 @@ bids_beginnings = {'_task-','_task-',''};
 series_type = {'func','func','anat'};
 
 
-%% Create Dataset Description (Taken from Sara Calzolari's script)
+%% Create Dataset Description (Taken from Sara Carzolari's script)
 cd(main_folder)
 [status, msg, msgID] = mkdir(new_dir); % directory where to put json file and table with participants
 cd(new_dir) % move to the new directory
@@ -153,7 +153,7 @@ json_options.indent         = '    ';
 jsonSaveDir = fileparts(mri_json_name);
 jsonwrite(mri_json_name,mri_json,json_options) %This function requires JSONio: a MATLAB JSON library (v1.2) --> https://github.com/gllmflndn/JSONio
 
-%% Create Participants Table (Taken from Sara Calzolari's script)
+%% Create Participants Table (Taken from Sara Carzolari's script)
 % Add your data here
 %script
 participants_tsv_name = 'participants.tsv';
@@ -302,7 +302,7 @@ for idx = 1:numel(labels) %for each subject
                                         disp(strcat('I moved the file but since a file with that name was already present, I added a timestamp to the name to avoid replacement'))
                                     end
 
-                                    %% Create Sidecar JSon Document. This part was taken from Sara Calzolari'script.
+                                    %% Create Sidecar JSon Document. This part was taken from Sara Carzolari'script.
                                     
                                     % This Json sidercar file is created when the nifti file is moved. Change the information
                                     mri_json_name = char(strcat('sub-',new_labels(idx),'_',char(conditions_labels(j)),bids_beginnings(index),series_bids_labels(index),bids_endings(index),'.json'));
