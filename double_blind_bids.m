@@ -27,6 +27,7 @@
 %               sub-01_ses-kiwi_task-TASKNAME_bold.nii 
 %               sub-01_ses-kiwi_task-TASKNAME_bold.json
 
+% If you are working on linux you may want to change all the '\' to '/'
 
 %% Main Variables
 bids_folder = 'C:\XXX-XXX\XXX\XXX\bidsdataset\';
