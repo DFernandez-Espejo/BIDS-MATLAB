@@ -1,4 +1,6 @@
 # BIDS-MATLAB
+
+# RAW TO BIDS 
 BIDS Creator from MRI raw data 
 Davide Aloi - PhD student University of Birmingham
 A series of script that can help you to convert a fMRI raw dataset to BIDS.
@@ -56,3 +58,34 @@ Experiment folder (README,CHANGES,participants.tsv,dataset_description.json).
                     sub-n_ses-SesName_task-TaskName.json
                     sub-n_ses-SesName_task-TaskName.nii
     ...
+
+# DOUBLE BLIND SCRIPT 
+%% Double blinder for BIDS
+%% How To Use
+% The structure of your dataset should follow the BIDS criteria (see
+% http://bids.neuroimaging.io/)
+% This script applies new labels to all the files and folders of a BIDS
+% dataset. 
+% You just need to define the path of the folder containing the subject
+% folders and your sessions. In this example session1, session2 and
+% session3 will be renamed kiwi, avocado and pineapple for all the 6
+% subjects. 
+
+% E.g.
+% Main folder
+%	Sub-01
+%       ses-session1
+%           func
+%               sub-01_ses-session1_task-TASKNAME_bold.nii 
+%               sub-01_ses-session1_task-TASKNAME_bold.json
+% Will become
+%	Sub-01
+%       ses-kiwi
+%           func
+%               sub-01_ses-kiwi_task-TASKNAME_bold.nii 
+%               sub-01_ses-kiwi_task-TASKNAME_bold.json
+
+
+
+
+
