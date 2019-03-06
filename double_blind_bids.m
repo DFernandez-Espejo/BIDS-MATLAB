@@ -22,7 +22,7 @@
 %               sub-01_ses-session1_task-TASKNAME_bold.json
 % Will become
 %	Sub-01
-%        ses-kiwi
+%            ses-kiwi
 %              func
 %               sub-01_ses-kiwi_task-TASKNAME_bold.nii 
 %               sub-01_ses-kiwi_task-TASKNAME_bold.json
