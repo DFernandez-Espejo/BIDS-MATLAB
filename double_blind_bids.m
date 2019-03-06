@@ -33,7 +33,7 @@ bids_folder = 'C:\XXX-XXX\XXX\XXX\bidsdataset\';
 sessions = {'session1','session2','session3'}; % The original labels
 sub_folders = {'anat','func'};
 labels = {'03','04','05','06'}; % Subject labels
-% IMPORTANT FOR  DOUBLE BLIND!!! %%
+% IMPORTANT FOR DOUBLE BLIND!!! %%
 new_names =  {'kiwi','avocado','pineapple'}; % To be assigned by another researcher 
 
 %% Iteration
