@@ -16,14 +16,14 @@
 % E.g.
 % Main folder
 %	Sub-01
-%       ses-session1
-%           func
+%           ses-session1
+%            func
 %               sub-01_ses-session1_task-TASKNAME_bold.nii 
 %               sub-01_ses-session1_task-TASKNAME_bold.json
 % Will become
 %	Sub-01
-%       ses-kiwi
-%           func
+%        ses-kiwi
+%              func
 %               sub-01_ses-kiwi_task-TASKNAME_bold.nii 
 %               sub-01_ses-kiwi_task-TASKNAME_bold.json
 
