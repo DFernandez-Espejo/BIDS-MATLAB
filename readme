@@ -52,8 +52,8 @@ Experiment folder (README,CHANGES,participants.tsv,dataset_description.json).
         Ses (ses-sesName)
             Subj-number.tsv (not in the script)
                 anat
-                sub-n_ses-SesName_T1w.nii
-                sub-n_ses-SesName_T1w.json
+                    sub-n_ses-SesName_T1w.nii
+                    sub-n_ses-SesName_T1w.json
                 func
                     sub-n_ses-SesName_task-TaskName.json
                     sub-n_ses-SesName_task-TaskName.nii
