@@ -1,0 +1,58 @@
+# RAW TO BIDS 
+BIDS Creator from MRI raw data 
+Davide Aloi - PhD student University of Birmingham
+A series of script that can help you to convert a fMRI raw dataset to BIDS.
+
+INPUT
+RAW data should be organised as following:
+Experiment folder
+    Subject folder (C01,02,03 etc).
+        Condition folder (C01_SessionConditionName)
+            DICOM folder (if present)
+                DICOM files' names are not important BUT they should have at
+                 the header SeriesDescription containing a string that
+                 identify the series (e.g. fMRI_joystick_pre or T1_VOL)
+            or
+            NIFTI files containing the SeriesConditionName in their name
+            (e.g. sub-02_task-fMRIjoystickPre_bold.nii)
+            nb BIDS does't allow underscores in the task name (e.g.
+            fMRI_joystick_pre must be fMRIjoystickPre). This is the reason
+            why we will define 2 different variables: series_descriptions
+            (which must be equal to the one contained in DICOM headers or
+             in the name of the files .nii in your raw dataset)
+            and series_bids_labels, which should not have underscores.
+     ...
+
+OUTPUT
+RAW DICOM files are converted to nifty and a JSON sidecar files are created.
+The name of the file is created by reading the header "SeriesDescription"
+of the DICOM file and using the relative label defined in the
+variable series_bids_labels.
+ E.g. sub-01_ses-SesName_task-TaskName.nii and
+ sub-01_ses-SesName_task-TaskName.json.
+
+Alternatively, if files were already converted (in this case there should
+not be DICOM folders within the subject folders otherwise the script will
+convert the DICOM files within these folders instead of using the nifti
+files), the script will look for nifti files containing the condition name
+within their names.
+e.g. if the condition is fMRI_tdcs_pre, the nifti file should be:
+XXXXX_fMRI_tdcs_pre_XXXXXX.nifti
+
+Note: When a dicom folder is not present the script presumes that DICOM files
+have already been converted to nifti and it will look for .nii files. In
+this case the script will have to write a Json sidecar file. You should
+therefore insert the information that you want to have in your json
+sidecar file in the script block named "Create Sidecar JSon Document" below.
+The dataset is then organised according to the bids standard as following:
+Experiment folder (README,CHANGES,participants.tsv,dataset_description.json).
+    Subj-number
+        Ses (ses-sesName)
+            Subj-number.tsv (not in the script)
+                anat
+                    sub-n_ses-SesName_T1w.nii
+                    sub-n_ses-SesName_T1w.json
+                func
+                    sub-n_ses-SesName_task-TaskName.json
+                    sub-n_ses-SesName_task-TaskName.nii
+    ...
