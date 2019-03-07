@@ -4,8 +4,8 @@ This is a collection of scripts that can help you building and working on a BIDS
 
 1) RawToMatlab: this script builds a BIDS dataset starting from a raw dataset.
 2) Double-Blinder: this script assignes new labels to your bids dataset.
-3) JsonFixer: this script iterate all the json files of your BIDS dataset and can change/add new lines in case something is missing
+3) JsonFixer: this script iterates all the json files of your BIDS dataset and can change/add new lines in case something is missing
 or a mistake was made during the creation of the bids dataset.
-4) NiiHeaderFixer: this script iterate all the .nii files of your dataset and can change specific values in the header. It
+4) NiiHeaderFixer: this script iterates all the .nii files of your dataset and can change specific values in the header. It
 can be helpful in case there is a wrong value in the headers (e.g. a repetition time set to 0)
 
