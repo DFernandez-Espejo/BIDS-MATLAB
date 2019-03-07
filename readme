@@ -7,5 +7,9 @@ This is a collection of scripts that can help you building and working on a BIDS
 3) JsonFixer: this script iterates all the json files of your BIDS dataset and can change/add new lines in case something is missing
 or a mistake was made during the creation of the bids dataset.
 4) NiiHeaderFixer: this script iterates all the .nii files of your dataset and can change specific values in the header. It
-can be helpful in case there is a wrong value in the headers (e.g. a repetition time set to 0)
+can be helpful in case there is a wrong value in the headers (e.g. a repetition time set to 0).
 
+
+
+To be added/fixed
+- Consider changing all the strcat functions into fullfile functions
